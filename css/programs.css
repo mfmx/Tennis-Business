@@ -1,0 +1,280 @@
+html { 
+background: url(../img/t.gif) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#brand{
+    background-color: black;
+    opacity: 1;
+    border-right: 1px solid white;
+    float: left;
+    margin-top:1%;
+    font-size: 2em;
+}
+#brand a:hover{
+color:greenyellow;   
+text-decoration: none;
+}
+.navi{
+    background: none repeat scroll 0 0 #000;
+    opacity:0.6;
+    position:fixed;
+    top: 5%;
+    z-index:80;
+    width: 100%;
+    height: 5em;
+
+    
+}
+
+#pgLinks{
+    margin-top:1%;
+    font-size: 1em;
+    float: right;
+}
+
+.navi a {
+    color:white;
+    padding: 1em;
+}
+
+.roll-link {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    -webkit-perspective: 600px;
+       -moz-perspective: 600px;
+       -ms-perspective: 600px;
+       perspective: 600px;
+
+    -webkit-perspective-origin: 50% 50%;
+       -moz-perspective-origin: 50% 50%;
+       -ms-perspective-origin: 50% 50%;
+       perspective-origin: 50% 50%;
+       
+}
+
+.roll-link:hover {text-decoration:none;}
+
+.roll-link span {
+    display: block;
+    position: relative;
+    padding: 0 2px;
+
+    -webkit-transition: all 400ms ease;
+       -moz-transition: all 400ms ease;
+       -ms-transition: all 400ms ease;
+       transition: all 400ms ease;
+    
+    -webkit-transform-origin: 50% 0%;
+       -moz-transform-origin: 50% 0%;
+       -ms-transform-origin: 50% 0%;
+       transform-origin: 50% 0%;
+    
+    -webkit-transform-style: preserve-3d;
+       -moz-transform-style: preserve-3d;
+       -ms-transform-style: preserve-3d;
+       transform-style: preserve-3d;
+}
+.roll-link:hover span {
+        background: white;
+    color:dimgray;
+         
+
+        -webkit-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+           -moz-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+           -ms-transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+           transform: translate3d( 0px, 0px, -30px ) rotateX( 90deg );
+}
+
+.roll-link span:after {
+    content: attr(data-title);
+
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 0 2px;
+
+    color: dimgray;
+    background: white;
+
+    -webkit-transform-origin: 50% 0%;
+       -moz-transform-origin: 50% 0%;
+       -ms-transform-origin: 50% 0%;
+       transform-origin: 50% 0%;
+
+    -webkit-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+       -moz-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+       -ms-transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+       transform: translate3d( 0px, 105%, 0px ) rotateX( -90deg );
+}
+
+/*navbar for mobile*/
+.navbar{
+    opacity:.6; 
+    position: fixed;
+     top:5%;
+    z-index:80;
+    width: 50%;
+}
+.navbar-brand {
+color:white!important;}
+.navbar-brand:hover {
+color:greenyellow!important;
+}
+
+
+
+/*Main Content*/
+#mainContent{
+    background-color:whitesmoke;
+position: absolute;
+    top:88%;
+    width:100%;
+
+
+}
+
+#mainContent h2{
+text-align: center;}
+
+#mainContent h3,p{
+margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+
+
+/*Price section animation*/
+
+.pricesContainer{
+margin-left: 25%;
+width: 60%;
+}
+
+
+#f1_container {
+  position: relative;
+    margin: 10px auto;
+  width: 210px;
+  height: 160px;
+  z-index: 1;
+    
+    background-color: whitesmoke;
+    
+    
+}
+#f1_container {
+  perspective: 1000;
+    -webkit-perspective: 1000;
+  -ms-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  
+}
+#f1_card {
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 1.0s linear;
+      -ms-transform-style: preserve-3d;
+      -ms-transition: all 1.0s linear;
+   -moz-transform-style: preserve-3d;
+      -moz-transition: all 1.0s linear;
+     -webkit-transform-style: preserve-3d;
+      -webkit-transition: all 1.0s linear;
+    -o-transform-style: preserve-3d;
+      -0-transition: all 1.0s linear;
+    
+
+}
+#f1_container:hover #f1_card {
+  transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);    
+  box-shadow: -5px 5px 5px #aaa;
+}
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Safari & Chrome */
+  -moz-backface-visibility: hidden; /* Firefox */
+  -ms-backface-visibility: hidden; /* Internet Explorer */
+  -o-backface-visibility: hidden; /* Opera */
+
+    border:1px solid lightgray;
+}
+.face.back {
+  display: block;
+  transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  box-sizing: border-box;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  background-color:darkred;
+}
+
+#f1_container h4{
+text-align: center;
+margin-top: 30%;
+font-family: monospace;}
+
+
+
+footer{
+background-color: white;
+position: absolute;
+    top:100%;
+    opacity: 0.7;
+    width: 100%;
+    text-align: center;
+}
+footer address{
+margin-top: 5%;
+}
+
+/*social media*/
+#seperator{
+color:black;
+}
+
+#socialDiv ul li{
+
+display: inline-block;}
+#fb {
+    background-image: url("../img/socialmedias.png");
+    background-position: -54px 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    height: 85px;
+    width: 76px;
+    
+}
+#tw {
+    background-image: url("../img/socialmedias.png");
+    background-position: 186px 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    height: 86px;
+    width: 54px;
+}
+#ig {
+    background-image: url("../img/socialmedias.png");
+    background-position: -113px 0;
+    border: 1px solid transparent;
+    cursor: pointer;
+    height: 85px;
+    width: 70px;
+}
